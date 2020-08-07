@@ -42,9 +42,11 @@ sed -i 's/\(^.*.ts$\)/hls-encrypted\/\1/' video-encrypted.m3u8
 ```shell
 # 播放未加密的
 ffplay video.m3u8
+ffplay https://demo.yonghong.me/video/video.m3u8
 
 # 从URL获取enc.key
 ffplay -allowed_extensions ALL video-encrypted.m3u8
+ffplay https://demo.yonghong.me/video/video-encrypted.m3u8
 
 # 本地播放
 cp enc.key hls
